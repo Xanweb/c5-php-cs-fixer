@@ -6,10 +6,11 @@
   "license": "MIT",
   "require": {
     "php": "^7.2",
-    "concrete5/core": "8.5.*",
+    "concrete5/core": "dev-develop",
     "xanweb/c5-common": "^1.0",
-    "friendsofphp/php-cs-fixer": "2.14.*",
-    "sebastian/diff": "^3.0"
+    "friendsofphp/php-cs-fixer": "2.16.4",
+    "sebastian/diff": "^3.0",
+    "mlocati/ci-info": "^1"
   },
   "autoload": {
     "psr-4": {

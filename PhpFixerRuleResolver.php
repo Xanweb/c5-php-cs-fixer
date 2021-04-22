@@ -7,34 +7,35 @@ use Concrete\Core\Support\CodingStyle\PhpFixerRuleResolver as CorePhpFixerRuleRe
 class PhpFixerRuleResolver extends CorePhpFixerRuleResolver
 {
     /**
-    * Get the rules associated to specific flags.
-    *
-    * @param int $flags A combination of PhpFixer::FLAG_... flags.
-    * @param bool $onlyAvailableOnes return only the available rules
-    * @param string $minimumPhpVersion the minimum PHP version that the files to be checked/fixed must be compatible with
-    *
-    * @return array
-    */
+     * Get the rules associated to specific flags.
+     *
+     * @param int    $flags             A combination of PhpFixer::FLAG_... flags.
+     * @param bool   $onlyAvailableOnes return only the available rules
+     * @param string $minimumPhpVersion the minimum PHP version that the files to be checked/fixed must be compatible with
+     *
+     * @return array
+     */
     public function getRules($flags, $onlyAvailableOnes, $minimumPhpVersion = '')
     {
         return [
-            'align_multiline_comment' => ['comment_type'=>'phpdocs_like'],
+            'align_multiline_comment' => true,
             'array_indentation' => true,
-            'array_syntax' => ['syntax'=>'short'],
-            'binary_operator_spaces' => ['align_double_arrow'=>false,'align_equals'=>false],
+            'array_syntax' => ['syntax' => 'short'],
+            'binary_operator_spaces' => true,
             'blank_line_after_namespace' => true,
             'blank_line_after_opening_tag' => true,
-            'blank_line_before_statement' => ['statements'=>['declare','exit','return','throw','try','yield']],
+            'blank_line_before_statement' => true,
             'braces' => true,
             'cast_spaces' => true,
-            'class_attributes_separation' => ['elements'=>['method']],
-            'class_definition' => ['single_line'=>true],
+            'class_attributes_separation' => ['elements' => ['method']],
+            'class_definition' => true,
             'combine_consecutive_issets' => true,
             'combine_consecutive_unsets' => true,
             'combine_nested_dirname' => true,
             'compact_nullable_typehint' => true,
-            'concat_space' => ['spacing'=>'one'],
-            'declare_equal_normalize' => ['space'=>'single'],
+            'concat_space' => ['spacing' => 'one'],
+            'constant_case' => true,
+            'declare_equal_normalize' => true,
             'dir_constant' => true,
             'elseif' => true,
             'encoding' => true,
@@ -43,15 +44,13 @@ class PhpFixerRuleResolver extends CorePhpFixerRuleResolver
             'function_declaration' => true,
             'function_to_constant' => true,
             'function_typehint_space' => true,
-            'hash_to_slash_comment' => true,
             'implode_call' => true,
             'include' => true,
             'indentation_type' => true,
-            'is_null' => ['use_yoda_style'=>false],
+            'is_null' => true,
             'line_ending' => true,
             'linebreak_after_opening_tag' => true,
             'lowercase_cast' => true,
-            'lowercase_constants' => true,
             'lowercase_keywords' => true,
             'lowercase_static_reference' => true,
             'magic_constant_casing' => true,
@@ -68,11 +67,11 @@ class PhpFixerRuleResolver extends CorePhpFixerRuleResolver
             'no_empty_comment' => true,
             'no_empty_phpdoc' => true,
             'no_empty_statement' => true,
-            'no_extra_blank_lines' => ['tokens'=>['curly_brace_block','extra','parenthesis_brace_block','square_brace_block','throw','use']],
+            'no_extra_blank_lines' => true,
             'no_homoglyph_names' => true,
             'no_leading_import_slash' => true,
             'no_leading_namespace_whitespace' => true,
-            'no_mixed_echo_print' => ['use'=>'echo'],
+            'no_mixed_echo_print' => true,
             'no_multiline_whitespace_around_double_arrow' => true,
             'no_php4_constructor' => true,
             'no_short_bool_cast' => true,
@@ -98,7 +97,7 @@ class PhpFixerRuleResolver extends CorePhpFixerRuleResolver
             'object_operator_without_whitespace' => true,
             'ordered_class_elements' => true,
             'ordered_imports' => true,
-            'phpdoc_add_missing_param_annotation' => ['only_untyped'=>false],
+            'phpdoc_add_missing_param_annotation' => true,
             'phpdoc_align' => ['align'=>'left'],
             'phpdoc_annotation_without_dot' => true,
             'phpdoc_indent' => true,
@@ -129,6 +128,7 @@ class PhpFixerRuleResolver extends CorePhpFixerRuleResolver
             'single_class_element_per_statement' => true,
             'single_import_per_statement' => true,
             'single_line_after_imports' => true,
+            'single_line_comment_style' => ['comment_types' => ['hash']],
             'single_quote' => true,
             'space_after_semicolon' => true,
             'standardize_not_equals' => true,

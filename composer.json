@@ -1,7 +1,7 @@
 {
   "name": "xanweb/c5-php-cs-fixer",
-  "description": "PHP CS FIXER for Concrete5",
-  "keywords": ["concrete5", "concrete5-v8", "library"],
+  "description": "PHP CS FIXER for Concrete CMS",
+  "keywords": ["concrete-cms", "concrete5", "concrete5-v9", "library"],
   "type": "library",
   "license": "MIT",
   "require": {
